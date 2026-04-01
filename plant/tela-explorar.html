@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/tela-explorar.css">
+  <title>Tela de explorar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu-lateral">
+      <div class="bnt-expandir">
+
+        <i class="bi bi-list-ul"></i>
+
+      </div>
+
+      <ul>
+
+
+        <li class="item-menu">
+          <a href="tela-inicial.html">
+            <span class="icon"><i class="bi bi-house"></i></span>
+            <span class="txt-link">Lar</span>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="tela-explorar.html">
+            <span class="icon"><i class="bi bi-flower2"></i></span>
+            <span class="txt-link">Explorar</span>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="calendario.html">
+            <span class="icon"><i class="bi bi-calendar-date"></i></span>
+            <span class="txt-link">Calendario</span>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="https://share.google/7dHl0sEtQNh0AnkIb">
+            <span class="icon"><i class="bi bi-camera-fill"></i></span>
+            <span class="txt-link">Pesquisa por foto</span>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="index.html">
+            <span class="icon"><i class="bi bi-person-circle"></i></span>
+            <span class="txt-link">Conta</span>
+          </a>
+        </li>
+
+
+
+
+
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section class="topo">
+      <div class="pesquisa">
+        <input type="text" class="pesquisa-txt" placeholder="Pesquisar">
+        <a href=""></a>
+        <i class="bi bi-search"></i>
+      </div>
+
+
+
+
+    </section>
+
+    <section class="catalago">
+
+      <div class="dentro-catalago">
+
+        <button class="button-catalago">Orquídea</button>
+
+        <button class="button-catalago">Espada-de-São-Jorge</button>
+
+        <button class="button-catalago">Planta-aranha</button>
+
+        <button class="button-catalago">Kalanchoe</button>
+
+        <button class="button-catalago">Monstera deliciosa</button>
+
+        <button class="button-catalago">Lírio-da-Paz</button>
+
+      </div>
+
+    </section>
+
+
+    <div id="lightbox" class="lightbox">
+      <span class="fechar">&times;</span>
+      <img id="imagem-grande" src="">
+      <button class="anterior">&#10094;</button>
+      <button class="proximo">&#10095;</button>
+    </div>
+
+
+
+    <section class="plantas-sugestao">
+
+
+      <div class="plantas-grid-sugestao">
+    
+
+        <div class="planta-card-sugestao" data-query="suculentas">
+          <img src="img/suculentas.webp" alt="Suculenta">
+          <p>Suculenta</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="orquídeas">
+          <img src="img/Orquideas-445x445.jpeg" alt="Orquídea">
+          <p>Orquídea</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="cactos">
+          <img src="img/7cfc9dfa29124536f34186c0e9191d6a.jpg" alt="Cacto">
+          <p>Cacto</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="rosas">
+          <img src="img/DSC07907.JPG" alt="Rosa">
+          <p>Rosa</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="lírios">
+          <img src="img/lirio_asiatico_brindisi_rosa_cartela_com_1_bulbo_7097_1_d5aa255d387c3f1a20494ec2d81d5c48.webp"
+            alt="Lírio">
+          <p>Lírio</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="tulipa">
+          <img src="img/154043567663218714.webp" alt="Tulipa">
+          <p>Tulipa</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="girassóis">
+          <img src="img/flor-de-girassol-og.webp" alt="Girassol">
+          <p>Girassol</p>
+        </div>
+        <div class="planta-card-sugestao" data-query="violetas">
+          <img src="img/violeta-flor-curiosidades-beneficios-significado.webp" alt="Violeta">
+          <p>Violeta</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="explorar">
+      <div id="plantas-grid" class="plantas-grid">
+        <!-- Plantas serão exibidas aqui -->
+      </div>
+
+
+    </section>
+
+  </main>
+  <script src="Js/tela-explorar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #29251f;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+
+
+}
+
+.td {
+    position: relative;
+    display: inline-block;
+
+}
+
+.conteudo p {
+    font-size: 22px;
+}
+
+.conteudo h1,
+.conteudo p {
+    position: absolute;
+    bottom: 350px;
+    left: 10px;
+    color: #f6d8ff;
+    text-shadow: 1px 1px 5px black;
+    padding: 0 100px;
+}
+
+.conteudo h1 {
+    bottom: 470px;
+}
+
+.sla p {
+    margin: 10px;
+}
+
+
+.cadastro {
+
+    margin-left: 240px;
+    filter: shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+
+.cadastro h1 {
+    color: #2C4026;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 80px;
+    border-radius: 10px;
+    background-color: #82A633;
+
+
+}
+
+.cadastro p {
+    margin: 10px 0 5px 0;
+    color: #58732F;
+    font-size: 23.5px;
+}
+
+.formulario button {
+    background-color: #2C4026;
+    color: white;
+    border: none;
+    padding: 9px 60px;
+    border-radius: 5px;
+    margin-bottom: -20px;
+    font-size: 23px;
+
+
+}
+
+
+
+
+.formulario input {
+    font-size: 23px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+
+
+
+.button-cadas p {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: #435725;
+}
+
+
+
+img {
+    width: 100vh;
+    height: 98vh;
+    object-fit: cover;
+    filter: brightness(0.5);
+
+}
+
+.ja  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #58732F;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.ja p {
+     color: #29251f;
+     font-size: 22px;
+
+}

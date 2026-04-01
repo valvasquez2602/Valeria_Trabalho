@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*
+#2C4026
+#40592E
+#58732F
+#82A633
+#ffeccf , #fff4e3
+#29251f
+ */
+
+body {
+    height: 100vh;
+    background: linear-gradient(#ffeccf, #fff4e3);
+}
+
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #29251f;
+    padding: 40px 0 40px 1%;
+    box-shadow: 5px 0 0 #82A633;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    z-index: 10;
+
+
+
+}
+
+nav.menu-lateral:hover {
+    width: 300px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.bi.bi-list-ul {
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+
+}
+
+ul li.item-menu {
+    transition: 0.2s;
+}
+
+ul li.item-menu:hover {
+
+    background: #82A633;
+
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon>i {
+    font-size: 30px;
+
+}
+
+
+
+.pesquisa {
+    position: absolute;
+    left: 20%;
+    font-size: 24px;
+}
+
+.pesquisa input {
+    font-size: 20px;
+    padding: 8px 50px;
+    border-radius: 50px;
+}
+
+.pesquisa i.bi.bi-search {
+    font-size: 30px;
+    color: #b42253;
+}
+
+
+.topo {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1%
+}
+
+.botao-ad,
+.botao-fechar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    gap: 8px;
+    border-radius: 50%;
+    color: #fff4e3;
+    outline: none;
+    cursor: pointer;
+   
+
+}
+
+.botao-ad {
+    background-color: #65b82a;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    font-size: 50px;
+
+}
+
+.botao-fechar{
+    background-color: #b42253;
+    position: absolute;
+    left: 600px;
+    top: 610px;
+     font-size: 30px;
+
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    margin: 10%;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.adicao{
+    background: #29251f;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.form-adicionar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-adicionar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-adicionar button {
+    padding: 10px;
+    background-color: #65b82a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-adicionar button:hover {
+    background-color: #4a8f1f;
+}
+
+#botao-remover {
+    background-color: #b42253;
+}
+
+#botao-remover:hover {
+    background-color: #8a1a3f;
+}
+
+.adicao p {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+
+}
+
+.adicao h3{
+     color: #d5c1a2;
+    font-size: 30px;
+    position: absolute;
+    bottom: 600px;
+}
+
+.plantas-adicionadas {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.plantas-adicionadas h3 {
+    color: #29251f;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.planta-card {
+    background: #29251f;
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.planta-adicionada-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.planta-adicionada-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.planta-adicionada-item p {
+    color: white;
+    font-size: 25px;
+    margin-top: 0px;
+    text-align: center;
+    background: #29251f;
+    padding: 5px 150px;
+
+}
+
+.botao-remover-planta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.botao-remover-planta:hover {
+    background: rgba(255, 0, 0, 1);
+}
