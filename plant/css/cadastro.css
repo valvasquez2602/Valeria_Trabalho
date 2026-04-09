@@ -1,0 +1,22 @@
+  body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #bdcfbe, #658d67);
+            height: 100vh;
+        }
+
+        .card-cadastro {
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .lado-info {
+            color: white;
+        }
+
+        .lado-info h1 {
+            font-weight: bold;
+        }
+
+        .btn-success {
+            width: 100%;
+        }

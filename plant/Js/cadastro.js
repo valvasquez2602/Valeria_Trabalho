@@ -38,7 +38,8 @@ if (formulario) {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     alert('Cadastro realizado com sucesso!');
-    // Redireciona para outra página
+    
+    // Redireciona
     window.location.href = "login.html";
   });
 }
