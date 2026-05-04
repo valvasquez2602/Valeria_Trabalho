@@ -4,69 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Cadastre-se no flower</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cadastro.css">
+
+    <title>Login</title>
 </head>
 
 <body>
 
-    <section class="td">
+    <div class="container d-flex align-items-center justify-content-center vh-100">
+        <div class="row shadow-lg rounded overflow-hidden" style="max-width: 900px;">
 
-        <img src="img/folhas.png" alt="">
-
-        <section class="conteudo">
-            <h1>Bem-vindo🌺</h1>
-
-            <p>Cuide das suas plantas com facilidade! 🌱
-             Encontre dicas, lembretes e tudo o que precisa para manter seu jardim sempre bonito.
-            </p>
-        </section>
-
-
-    </section>
-
-
-    <section class="login">
-        <form class="formulario" id="formulario">
-
-
-
-            <h1>Login</h1>
-
-            <div class="sla">
-
-
-                <p>Usuário</p>
-                <input type="text" id="usuario" placeholder="Digite seu usuário ">
-
-                <p>Senha</p>
-                <input type="text" id="senha" placeholder="Digite sua senha">
-
-            </div>
-            <div class=" button-cadas">
-                <p>Esqueceu a senha?</p>
-                <button>Cadastrar</button>
+            <!-- lado esquerdo -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center lado-info p-4">
+                <h1>Bem-vindo</h1>
+                <p class="text-center color-white">
+                    Acesse sua conta e continue cuidando das suas plantas 🌱 <br>
+                    Seu jardim agradece!
+                </p>
             </div>
 
-        </form>
+            <!-- lado direito -->
+            <div class="col-md-6 bg-white">
+                <div class="card-cadastro">
 
+                    <h2 class="text-center text-success mb-4">Login</h2>
 
+                    <form id="formLogin">
 
-        <a href="index.html" class="nao">
-            <p>Não possui conta?</p>
-        </a>
+                        <div class="mb-3">
+                            <label class="form-label">Usuário</label>
+                            <input type="text" id="usuario" class="form-control" placeholder="Digite seu usuário">
+                        </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" id="senha" class="form-control" placeholder="Digite sua senha">
+                        </div>
+                        <a href="tela-inicial.html" class="btn btn-success w-100">Entrar</a>
+                    </form>
 
+                    <div class="text-center mt-3">
+                        <small>Não possui conta? <a href="cadastro.html">Cadastrar</a></small>
+                    </div>
 
-    </section>
+                </div>
+            </div>
 
-
+        </div>
+    </div>
 
     <script src="Js/login.js"></script>
-
-
-
-
 
 </body>
 
