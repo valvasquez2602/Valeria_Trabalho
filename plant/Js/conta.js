@@ -1,9 +1,6 @@
 // Verifica se o usuário está logado
 const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
-if (!usuarioLogado) {
-  alert('Você precisa fazer login primeiro.');
-  window.location.href = 'login.html';
-}
+
 
 // Seleciona elementos
 const editarBtn = document.getElementById('editarBtn');
