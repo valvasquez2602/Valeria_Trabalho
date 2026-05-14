@@ -1,40 +1,110 @@
-// Verifica se o usuário está logado
-const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+// PERFIL
+window.onload = function () {
+  document.getElementById("name").value = localStorage.getItem("name") || "";
+  document.getElementById("email").value = localStorage.getItem("email") || "";
+  document.getElementById("bio").value = localStorage.getItem("bio") || "";
+
+  loadLevel();
+  renderPlants();
+};
 
 
-// Seleciona elementos
-const editarBtn = document.getElementById('editarBtn');
-const inputFoto = document.getElementById('inputFoto');
-const fotoPerfil = document.getElementById('fotoPerfil');
-const imgFoto = document.getElementById('img-foto');
 
-// Carrega a foto de perfil salva, se existir
-const fotoSalva = localStorage.getItem(`fotoPerfil_${usuarioLogado.usuario}`);
-if (fotoSalva) {
-  imgFoto.src = fotoSalva;
+// XP / NIVEL
+let xp = parseInt(localStorage.getItem("xp")) || 0;
+let level = parseInt(localStorage.getItem("level")) || 1;
+
+function addXP(value) {
+  xp += value;
+
+  let needed = level * 50;
+
+  if (xp >= needed) {
+    xp -= needed;
+    level++;
+    alert("🎉 Subiu para o nível " + level + "!");
+  }
+
+  saveLevel();
+  updateLevelUI();
 }
 
-// Quando clicar no botão, abre o seletor de arquivos
-editarBtn.addEventListener('click', () => {
-  inputFoto.click();
-});
+function saveLevel() {
+  localStorage.setItem("xp", xp);
+  localStorage.setItem("level", level);
+}
 
-// Quando escolher uma nova foto
-inputFoto.addEventListener('change', (event) => {
-  const file = event.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const fotoURL = e.target.result;
-      // Salva a foto no localStorage associada ao usuário
-      localStorage.setItem(`fotoPerfil_${usuarioLogado.usuario}`, fotoURL);
-      if (imgFoto) {
-        imgFoto.src = fotoURL;
-      }
-      if (fotoPerfil) {
-        fotoPerfil.style.backgroundImage = `url('${fotoURL}')`;
-      }
-    };
-    reader.readAsDataURL(file);
+function loadLevel() {
+  updateLevelUI();
+}
+
+function updateLevelUI() {
+  let needed = level * 50;
+  let percent = (xp / needed) * 100;
+
+  document.getElementById("levelText").innerText = `Nível: ${level} 🌱`;
+  document.getElementById("xpText").innerText = `${xp} / ${needed} XP`;
+  document.getElementById("xpBar").style.width = percent + "%";
+}
+
+// PERFIL SAVE
+function saveProfile() {
+  localStorage.setItem("name", document.getElementById("name").value);
+  localStorage.setItem("email", document.getElementById("email").value);
+  localStorage.setItem("bio", document.getElementById("bio").value);
+
+  addXP(5);
+
+  alert("Perfil salvo 🌿");
+}
+
+
+
+
+
+
+let plants = JSON.parse(localStorage.getItem("plants")) || [];
+
+function addPlant() {
+  const input = document.getElementById("plantInput");
+  const value = input.value.trim();
+
+  if (!value) return;
+
+  plants.push(value);
+  input.value = "";
+
+  addXP(10);
+
+  savePlants();
+  renderPlants();
+}
+
+function deletePlant(index) {
+  plants.splice(index, 1);
+  savePlants();
+  renderPlants();
+}
+
+function savePlants() {
+  localStorage.setItem("plants", JSON.stringify(plants));
+}
+
+function renderPlants() {
+  const list = document.getElementById("plantList");
+  list.innerHTML = "";
+
+  if (plants.length === 0) {
+    list.innerHTML = "<p class='text-muted'>Nenhuma planta 🌱</p>";
+    return;
   }
-});
+
+  plants.forEach((plant, index) => {
+    list.innerHTML += `
+      <div class="plant-item">
+        <span>🌿 ${plant}</span>
+        <button onclick="deletePlant(${index})">X</button>
+      </div>
+    `;
+  });
+}

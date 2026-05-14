@@ -1,58 +1,54 @@
-let currentDate = new Date();
+const week = document.getElementById("week");
 
-function renderCalendar() {
-  const calendar = document.getElementById("calendar");
-  const monthYear = document.getElementById("monthYear");
+const days = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
 
-  calendar.innerHTML = "";
+// exemplo de dados
+let tasks = JSON.parse(localStorage.getItem("tasks")) || {};
 
-  const year = currentDate.getFullYear();
-  const month = currentDate.getMonth();
-
-  const firstDay = new Date(year, month, 1).getDay();
-  const lastDate = new Date(year, month + 1, 0).getDate();
-
-  const months = [
-    "Janeiro","Fevereiro","Março","Abril","Maio","Junho",
-    "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"
-  ];
-
-  monthYear.textContent = `${months[month]} ${year}`;
-
-  // espaços vazios antes do primeiro dia
-  for (let i = 0; i < firstDay; i++) {
-    const empty = document.createElement("div");
-    calendar.appendChild(empty);
-  }
-
-  // dias do mês
-  for (let day = 1; day <= lastDate; day++) {
-    const dayEl = document.createElement("div");
-    dayEl.classList.add("day");
-    dayEl.textContent = day;
-
-    const today = new Date();
-
-    if (
-      day === today.getDate() &&
-      month === today.getMonth() &&
-      year === today.getFullYear()
-    ) {
-      dayEl.classList.add("today");
-    }
-
-    calendar.appendChild(dayEl);
-  }
+function save() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-function prevMonth() {
-  currentDate.setMonth(currentDate.getMonth() - 1);
-  renderCalendar();
+function addTask(day) {
+  const text = prompt("O que você quer fazer nesse dia?");
+  if (!text) return;
+
+  if (!tasks[day]) tasks[day] = [];
+  tasks[day].push(text);
+
+  save();
+  render();
 }
 
-function nextMonth() {
-  currentDate.setMonth(currentDate.getMonth() + 1);
-  renderCalendar();
+function render() {
+  week.innerHTML = "";
+
+  days.forEach((day, index) => {
+
+    // regra simples: regar 2x na semana (ex: terça e sábado)
+    const waterDay = index === 1 || index === 5;
+
+    const card = document.createElement("div");
+    card.className = "col-md-6";
+
+    card.innerHTML = `
+      <div class="day-card ${waterDay ? "water" : ""}">
+        <div class="day-title">
+          ${day} ${waterDay ? "💧 regar plantas" : ""}
+        </div>
+
+        <div id="tasks-${index}">
+          ${(tasks[index] || []).map(t => `<div class="task">🌱 ${t}</div>`).join("")}
+        </div>
+
+        <button class="btn btn-sm btn-success mt-2" onclick="addTask(${index})">
+          + adicionar
+        </button>
+      </div>
+    `;
+
+    week.appendChild(card);
+  });
 }
 
-renderCalendar();
+render();

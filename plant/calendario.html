@@ -1,66 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Usuária</title>
-    <link rel="stylesheet" href="css/calendario.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/tela-inicial.css">
 
-
+    <title>Plantas</title>
 </head>
-<body>
-    <header>
-        <nav class="menu-lateral">
-            <div class="bnt-expandir">
 
-                <i class="bi bi-list-ul"></i>
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-flower1"></i> Plantas
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active-link" href="tela-inicial.html">
+                            <i class="bi bi-house"></i> Lar
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tela-explorar.html">
+                            <i class="bi bi-flower2"></i> Explorar
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="calendario.html">
+                            <i class="bi bi-calendar-event"></i> Calendário
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-camera"></i> Pesquisa Foto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="conta.html">
+                            <i class="bi bi-person-circle"></i> Conta
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- MENU -->
+
+    <div class="container mt-4">
+
+        <h3 class="text-success mb-3">Semana de Cuidados 🌱</h3>
+
+        <div class="row" id="week"></div>
+
+    </div>
+
+
+    <footer class="footer text-white pt-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h5>Sobre nós</h5>
+                    <p>
+                        Somos apaixonados por plantas e queremos levar mais verde para o seu dia a dia
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Plantas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Dicas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <p>Email: contato@plantas.com</p>
+                    <p>WhatsApp: (48) 99999-9999</p>
+                </div>
 
             </div>
 
-            <ul>
+            <hr class="bg-light">
+
+            <div class="text-center pb-3">
+                <small>© 2026 Site de Plantas - Todos os direitos reservados</small>
+            </div>
+        </div>
+    </footer>
 
 
-                <li class="item-menu">
-                    <a href="tela-inicial.html">
-                        <span class="icon"><i class="bi bi-house"></i></span>
-                        <span class="txt-link">Lar</span>
-                    </a>
-                </li>
+    <script src="Js/calendario.js"></script>
+</body>
 
-                <li class="item-menu">
-                    <a href="tela-explorar.html">
-                        <span class="icon"><i class="bi bi-flower2"></i></span>
-                        <span class="txt-link">Explorar</span>
-                    </a>
-                </li>
-
-                <li class="item-menu">
-                    <a href="calendario.html">
-                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Calendario</span>
-                    </a>
-                </li>
-
-                <li class="item-menu">
-                    <a href="https://share.google/7dHl0sEtQNh0AnkIb">
-                        <span class="icon"><i class="bi bi-camera-fill"></i></span>
-                        <span class="txt-link">Pesquisa por foto</span>
-                    </a>
-                </li>
-
-                <li class="item-menu">
-                    <a href="index.html">
-                        <span class="icon"><i class="bi bi-person-circle"></i></span>
-                        <span class="txt-link">Conta</span>
-                    </a>
-                </li>
-
-
-
-
-
-            </ul>
-
-        </nav>
-    </header>
+</html>
