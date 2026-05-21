@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <link rel="stylesheet" href="css/tela-inicial.css">
 
     <title>Plantas</title>
@@ -67,15 +68,91 @@
 
 
 
-    <!-- MENU -->
+<div class="container py-4">
+    <div class="calendar-container">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="calendar-header-title mb-0">Janeiro 05 - 2026</h4>
+            <div class="d-flex align-items-center text-white">
+                <span class="me-3 fw-bold cursor-pointer">Hoje</span>
+                <button class="btn btn-sm btn-outline-light border-0 py-0 px-1">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="btn btn-sm btn-outline-light border-0 py-0 px-1">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
 
-    <div class="container mt-4">
+        <div class="calendar-inner">
+            <div class="table-responsive">
+                
+                <div class="d-flex align-items-center pb-3 border-bottom">
+                    <div class="time-col fw-bold text-uppercase">GMT+8</div>
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="day-header flex-fill"><div>03</div><small>Seg</small></div>
+                        <div class="day-header flex-fill"><div>04</div><small>Ter</small></div>
+                        <div class="day-header flex-fill active"><div class="day-number">05</div><small class="d-block">Qua</small></div>
+                        <div class="day-header flex-fill"><div>06</div><small>Qui</small></div>
+                        <div class="day-header flex-fill"><div>07</div><small>Sex</small></div>
+                        <div class="day-header flex-fill"><div>08</div><small>Sáb</small></div>
+                    </div>
+                </div>
 
-        <h3 class="text-success mb-3">Semana de Cuidados 🌱</h3>
+                <div class="d-flex calendar-grid-row py-2">
+                    <div class="time-col">10 Am</div>
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="calendar-cell flex-fill" id="seg-10"></div>
+                        <div class="calendar-cell flex-fill" id="ter-10"></div>
+                        <div class="calendar-cell flex-fill" id="qua-10"></div>
+                        <div class="calendar-cell flex-fill" id="qui-10"></div>
+                        <div class="calendar-cell flex-fill" id="sex-10"></div>
+                        <div class="calendar-cell flex-fill" id="sab-10"></div>
+                    </div>
+                </div>
 
-        <div class="row" id="week"></div>
+                <div class="d-flex calendar-grid-row py-2">
+                    <div class="time-col">11 Am</div>
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="calendar-cell flex-fill" id="seg-11"></div>
+                        <div class="calendar-cell flex-fill" id="ter-11"></div>
+                        <div class="calendar-cell flex-fill" id="qua-11"></div>
+                        <div class="calendar-cell flex-fill" id="qui-11"></div>
+                        <div class="calendar-cell flex-fill" id="sex-11"></div>
+                        <div class="calendar-cell flex-fill" id="sab-11"></div>
+                    </div>
+                </div>
+
+                <div class="d-flex calendar-grid-row py-2 current-time-line">
+                    <div class="time-col">8 Am</div>
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="calendar-cell flex-fill" id="seg-08"></div>
+                        <div class="calendar-cell flex-fill" id="ter-08"></div>
+                        <div class="calendar-cell flex-fill" id="qua-08"></div>
+                        <div class="calendar-cell flex-fill" id="qui-08"></div>
+                        <div class="calendar-cell flex-fill" id="sex-08"></div>
+                        <div class="calendar-cell flex-fill" id="sab-08"></div>
+                    </div>
+                </div>
+
+                <div class="d-flex calendar-grid-row py-2 border-0">
+                    <div class="time-col">9 Am</div>
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="calendar-cell flex-fill" id="seg-09"></div>
+                        <div class="calendar-cell flex-fill" id="ter-09"></div>
+                        <div class="calendar-cell flex-fill" id="qua-09"></div>
+                        <div class="calendar-cell flex-fill" id="qui-09"></div>
+                        <div class="calendar-cell flex-fill" id="sex-09"></div>
+                        <div class="calendar-cell flex-fill" id="sab-09"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
     </div>
+</div>
+
 
 
     <footer class="footer text-white pt-4 mt-5">
